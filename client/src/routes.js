@@ -3,12 +3,16 @@ import { Routes as RouterContainer, Route } from "react-router-dom";
 
 import { Home, SignUp, SignIn } from './pages'
 
+const routeList = [
+    { path: '/', component: Home },
+    { path: '/signup', component: SignUp },
+    { path: '/signin', component: SignIn },
+]
+
 function Routes() {
     return (
         <RouterContainer>
-            <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signin" element={<SignIn />} />
+            {routeList.map(({ path, component: Component }) => <Route path={path} element={<Component />} />)}
         </RouterContainer>
     )
 }
