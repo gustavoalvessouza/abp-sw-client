@@ -1,7 +1,7 @@
+import Routes from "./routes";
+
 function App() {
-  return (
-    <h1>Abp Soluções Web</h1>
-  );
+  return <Routes />
 }
 
 export default App;
