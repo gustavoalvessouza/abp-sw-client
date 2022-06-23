@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import { Container, Header, HeaderTitle, Card, CardTitle, CardSubtitle, CardButtons, LoginButton } from './styles'
 
 import CalendarIcon from '../../assets/icons/calendar.png'
@@ -17,7 +19,10 @@ export const Home = () => {
                 <CardSubtitle>Selecione uma das opções abaixo</CardSubtitle>
 
                 <CardButtons>
-                    <LoginButton backgroundColor="#FF435B" color="#fff">Empresa</LoginButton>
+                    <Link to="/signin">
+                        <LoginButton backgroundColor="#FF435B" color="#fff">Empresa</LoginButton>
+                    </Link>
+
                     <LoginButton color="#717171">Pessoa</LoginButton>
                 </CardButtons>
             </Card>
