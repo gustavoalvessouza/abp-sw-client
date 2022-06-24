@@ -16,11 +16,13 @@ export const Home = () => {
                 <CardSubtitle>Selecione uma das opções abaixo</CardSubtitle>
 
                 <CardButtons>
-                    <Link to="/signin">
+                    <Link to="/signin/company">
                         <LoginButton backgroundColor="#FF435B" color="#fff">Empresa</LoginButton>
                     </Link>
 
-                    <LoginButton color="#717171">Pessoa</LoginButton>
+                    <Link to="/signin/user">
+                        <LoginButton color="#717171">Pessoa</LoginButton>
+                    </Link>
                 </CardButtons>
             </Card>
         </Container>

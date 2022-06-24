@@ -6,7 +6,7 @@ import { Home, SignUp, SignIn } from './pages'
 const routeList = [
     { path: '/', component: Home },
     { path: '/signup', component: SignUp },
-    { path: '/signin', component: SignIn },
+    { path: '/signin/:type', component: SignIn },
 ]
 
 function Routes() {
