@@ -2,17 +2,14 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-import { Container, Header, HeaderTitle, Card, CardTitle, CardSubtitle, CardButtons, LoginButton } from './styles'
+import { Header } from '../../components'
 
-import CalendarIcon from '../../assets/icons/calendar.png'
+import { Container, Card, CardTitle, CardSubtitle, CardButtons, LoginButton } from './styles'
 
 export const Home = () => {
     return (
         <Container>
-            <Header>
-                <img src={CalendarIcon} alt="Calendário" width={60} height={60} />
-                <HeaderTitle>Calendário Web</HeaderTitle>
-            </Header>
+            <Header />
 
             <Card>
                 <CardTitle>Você é uma?</CardTitle>

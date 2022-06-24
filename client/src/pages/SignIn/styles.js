@@ -21,37 +21,39 @@ export const CardTitle = styled.h3`
     color: #565656;
     width: 100%;
     font-size: 16pt;
-    text-align: center;
+    text-align: left;
 `
 
-export const CardSubtitle = styled.small`
-    display: inline-block;
-    color: #565656;
+export const CardInputs = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    font-size: 13pt;
-    text-align: center;
+    margin-top: 20px;
+`
+
+export const Input = styled.input`
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
 `
 
 export const LoginButton = styled.button`
     outline: none;
     border-radius: 4px;
     border: none;
-    background: ${props => props.backgroundColor || '#DBDBDB'};
+    background: #FF435B;
     padding: 15px;
-    width: 150px;
+    width: 100%;
     cursor: pointer;
     font-size: 12pt;
     font-weight: 600;
-    color: ${props => props.color || '#000'};
+    color: #fff;
 
     &:hover {
         filter: brightness(85%);
     }
-`
-
-export const CardButtons = styled.div`
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
 `
