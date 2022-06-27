@@ -32,6 +32,15 @@ export const CardInputs = styled.div`
     margin-top: 20px;
 `
 
+export const Input = styled.input`
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+`
+
 export const LoginButton = styled.button`
     outline: none;
     border-radius: 4px;

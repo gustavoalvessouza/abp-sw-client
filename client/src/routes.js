@@ -1,13 +1,14 @@
 import React from "react";
 import { Routes as RouterContainer, Route } from "react-router-dom";
 
-import { Home, SignUp, SignIn, Schedules } from "./pages";
+import { Home, SignUp, SignIn, Schedules, Dashboard } from "./pages";
 
 const routeList = [
 	{ path: "/", component: Home },
 	{ path: "/signup", component: SignUp },
 	{ path: "/signin/:type", component: SignIn },
 	{ path: "/schedules", component: Schedules },
+	{ path: "/dashboard", component: Dashboard },
 ];
 
 function Routes() {

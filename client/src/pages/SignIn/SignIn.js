@@ -1,16 +1,9 @@
 import React from "react";
 import { useParams, useLocation, Navigate, Link } from "react-router-dom";
 
-import { Header } from "../../components";
+import { Header, Input } from "../../components";
 
-import {
-	Container,
-	Card,
-	CardTitle,
-	CardInputs,
-	Input,
-	LoginButton,
-} from "./styles";
+import { Container, Card, CardTitle, CardInputs, LoginButton } from "./styles";
 
 import { typeRedirect, typeTranslator } from "../../configs/signInOptions";
 
