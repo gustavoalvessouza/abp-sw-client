@@ -9,7 +9,7 @@ export const Header = () => {
         <CustomLink to="/">
             <Container>
                 <img src={CalendarIcon} alt="Calendário" width={60} height={60} />
-                <Title>Calendário Web</Title>
+                <Title>Agenda Web</Title>
             </Container>
         </CustomLink>
     )

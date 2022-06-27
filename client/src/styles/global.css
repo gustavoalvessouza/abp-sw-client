@@ -10,3 +10,17 @@ body {
   height: 100%;
   background: #F2F2F2;
 }
+
+.tui-full-calendar-week-container {
+  height: 0px !important;
+  box-shadow: 0 0 30px #ccc !important;
+  background: #fff;
+}
+
+.tui-full-calendar-layout {
+  height: 0px !important;
+}
+
+.tui-view-1 {
+  height: 0px !important;
+}
