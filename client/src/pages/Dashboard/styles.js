@@ -56,4 +56,10 @@ export const LoginButton = styled.button`
     &:hover {
         filter: brightness(85%);
     }
+
+    &:disabled {
+        background: #ccc;
+        color: #848484;
+        cursor: unset;
+    }
 `

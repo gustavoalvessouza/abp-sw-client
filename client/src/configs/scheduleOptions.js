@@ -22,3 +22,12 @@ export const template = {
 		return null;
 	},
 };
+
+
+export const theme = {
+    'week.timegridOneHour.height': '2.5rem',
+    'week.timegridHalfHour.height': '1.25rem',
+    'week.today.backgroundColor': 'rgb(255, 67, 91, 0.2)',
+    'common.border': '1px solid #e5e5e5',
+    'common.creationGuide.backgroundColor': 'lightgrey'
+};

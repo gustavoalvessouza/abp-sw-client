@@ -24,7 +24,7 @@ export const SignIn = () => {
 
 				<CardInputs>
 					<Input placeholder="Usuário" />
-					<Input placeholder="Senha" />
+					<Input placeholder="Senha" type="password" />
 
 					<Link to={typeRedirect[type]} style={{ width: "100%" }}>
 						<LoginButton>Entrar</LoginButton>
