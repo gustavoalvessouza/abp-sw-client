@@ -32,7 +32,7 @@ export const Dashboard = () => {
 
 		const response = await createSchedule(schedule)
 
-		if (response.status == 200) {
+		if (response.status === 200) {
 			clearSchedule()
 			setCreatingSchedule(false)
 

@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import Calendar from "@toast-ui/react-calendar";
 
-import { getSchedules } from '../../services/schedulesService'
+import { toast } from 'react-toastify';
+
+import { deleteSchedule, getSchedules } from '../../services/schedulesService'
 
 import { Header } from "../../components";
 
@@ -16,6 +18,10 @@ import "tui-calendar/dist/tui-calendar.css";
 
 export const Schedules = () => {
 	const [schedules, setSchedules] = useState([])
+	
+	useEffect(() => {
+		loadSchedules()
+	}, [])
 
 	const loadSchedules = async () => {
 		const response = await getSchedules()
@@ -27,9 +33,19 @@ export const Schedules = () => {
 		setSchedules(formattedSchedules)
 	}
 
-	useEffect(() => {
-		loadSchedules()
-	}, [])
+	const onBeforeDeleteSchedule = async ({ schedule }) => {
+		const { id } = schedule
+
+		try {
+			await deleteSchedule(id)
+
+			loadSchedules()
+		} catch (err) {
+			toast('Ops! Algo não está certo, tente novamente.', {
+				type: 'error'
+			})
+		}
+	}
 
 	return (
 		<Container>
@@ -39,8 +55,10 @@ export const Schedules = () => {
 				<Calendar
 					view="week"
 					calendars={calendars}
+					useCreationPopup={false}
+              		useDetailPopup={true}
 					disableDblClick={true}
-					disableClick={true}
+					disableClick={false}
 					isReadOnly={false}
 					theme={theme}
 					taskView={false}
@@ -63,6 +81,7 @@ export const Schedules = () => {
 							'Sábado'
 						  ]
 					}}
+					onBeforeDeleteSchedule={onBeforeDeleteSchedule}
 				/>
 			</CalendarContainer>
 		</Container>

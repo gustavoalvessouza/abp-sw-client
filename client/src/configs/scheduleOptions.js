@@ -21,6 +21,14 @@ export const template = {
 	alldayTitle() {
 		return null;
 	},
+
+	popupEdit: function() {
+		return 'Editar';
+	},
+
+	popupDelete: function() {
+		return 'Deletar';
+	},
 };
 
 
